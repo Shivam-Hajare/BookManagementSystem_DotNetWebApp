@@ -91,8 +91,8 @@ namespace Book_Management_System.Models
                     {
                         cmd.Connection = cn;
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "INSERT INTO Books VALUES (@BookID,@BookName, @BookAuthor, @BookPrice)";
-                        cmd.Parameters.AddWithValue("@BookID", id);
+                        cmd.CommandText = "INSERT INTO Books (BookName, BookAuthor, BookPrice) VALUES (@BookName, @BookAuthor, @BookPrice)";
+                      //  cmd.Parameters.AddWithValue("@BookID", id);
                         cmd.Parameters.AddWithValue("@BookName", obj.BookName);
                         cmd.Parameters.AddWithValue("@BookAuthor", obj.BookAuthor);
                         cmd.Parameters.AddWithValue("@BookPrice", obj.BookPrice);
